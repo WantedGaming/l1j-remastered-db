@@ -1,21 +1,30 @@
 :root {
-    /* Main colors */
-    --dark-bg: #1a1e22;
-    --darker-bg: #141619;
-    --panel-bg: #1e2328;
-    --primary-color: #4caf50;
-    --secondary-color: #2196f3;
-    --accent-color: #ff9800;
-    --text-color: #e0e0e0;
-    --text-muted: #a0a0a0;
-    --border-color: #2c3137;
-    --hover-color: #2c3137;
+    /* Main colors - matching admin view */
+    --black-1: #111111;
+    --black-2: #161616;
+    --black-3: #1C1C1C;
+    --red-1: #E31C25;
+    --red-2: #B8000E;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --gray: #CCCCCC;
     
-    /* Gradients */
-    --primary-gradient: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
-    --secondary-gradient: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
-    --panel-gradient: linear-gradient(to bottom, #1e2328 0%, #171b1f 100%);
-    --header-gradient: linear-gradient(to bottom, #1a1e22 0%, #141619 100%);
+    /* Using admin color scheme */
+    --dark-bg: var(--black-1);
+    --darker-bg: var(--black-2);
+    --panel-bg: var(--black-3);
+    --primary-color: var(--red-1);
+    --secondary-color: var(--red-2);
+    --text-color: var(--white);
+    --text-muted: var(--gray);
+    --border-color: #2c3137;
+    --hover-color: var(--black-3);
+    
+    /* Gradients - matching admin view */
+    --primary-gradient: linear-gradient(135deg, var(--red-1) 0%, var(--red-2) 100%);
+    --secondary-gradient: linear-gradient(135deg, var(--black-1) 0%, var(--black-3) 100%);
+    --panel-gradient: linear-gradient(to bottom, var(--black-2) 0%, var(--black-1) 100%);
+    --header-gradient: linear-gradient(to bottom, var(--black-1) 0%, var(--black-2) 100%);
     
     /* Shadows */
     --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -120,12 +129,12 @@ nav ul li a.active {
 }
 
 .admin-link {
-    color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 .admin-link:hover {
     color: var(--text-color) !important;
-    background-color: var(--secondary-color) !important;
+    background-color: var(--primary-color) !important;
 }
 
 /* Main Content */
@@ -267,24 +276,12 @@ main {
     border-radius: var(--border-radius);
 }
 
-.boss-timers .section-title::after {
-    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
-}
-
-.db-stats .section-title::after {
-    background: var(--secondary-gradient);
-}
-
-.featured-items .section-title::after {
-    background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
-}
-
-.featured-npcs .section-title::after {
-    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
-}
-
+.boss-timers .section-title::after,
+.db-stats .section-title::after,
+.featured-items .section-title::after,
+.featured-npcs .section-title::after,
 .quick-tools .section-title::after {
-    background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+    background: var(--primary-gradient);
 }
 
 /* Boss Timers */
@@ -301,7 +298,7 @@ main {
     text-align: left;
     padding: var(--spacing-sm);
     background-color: rgba(0, 0, 0, 0.2);
-    color: #f44336;
+    color: var(--primary-color);
     font-weight: 600;
 }
 
@@ -343,7 +340,7 @@ main {
 .stat-value {
     font-size: 24px;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .view-more {
@@ -387,12 +384,9 @@ main {
     font-size: 18px;
 }
 
-.featured-items .item-icon {
-    color: #9c27b0;
-}
-
+.featured-items .item-icon,
 .featured-npcs .item-icon {
-    color: #ff9800;
+    color: var(--primary-color);
 }
 
 .item-details h3 {
@@ -430,7 +424,7 @@ main {
 
 .tool-item:hover {
     transform: translateY(-3px);
-    border-color: #00bcd4;
+    border-color: var(--primary-color);
     background-color: var(--hover-color);
 }
 
@@ -442,7 +436,7 @@ main {
     justify-content: center;
     background-color: var(--darker-bg);
     border-radius: 50%;
-    color: #00bcd4;
+    color: var(--primary-color);
     font-size: 16px;
 }
 

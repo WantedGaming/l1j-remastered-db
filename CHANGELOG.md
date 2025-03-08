@@ -6,7 +6,7 @@
 - Created separate views for admin and players/guests
 - Implemented a new player-focused interface based on the sample site design
 - Added dedicated player.php page with gaming-focused layout
-- Created new player-style.css with green/blue color scheme
+- Created new player-style.css with matching black and red color scheme
 - Added boss timers section for player view
 - Added database statistics display with visual counters
 - Added featured items and NPCs sections
@@ -18,6 +18,7 @@
 - Added visual indicator for switching between views
 - Enhanced navigation with clear view separation
 - Improved overall user experience with role-specific interfaces
+- Maintained consistent color scheme across both admin and player views
 
 ## [0.3.1] - 2025-03-08
 
