@@ -131,6 +131,51 @@ nav ul li a.player-view:hover {
     color: var(--white);
 }
 
+/* User info and logout button */
+nav ul li.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav ul li.user-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--white);
+}
+
+.admin-badge {
+    background-color: var(--red-1);
+    color: var(--white);
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.logout-btn {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: rgba(220, 53, 69, 0.2);
+    transition: all var(--transition-speed);
+}
+
+.logout-btn:hover {
+    background-color: var(--red-1);
+    color: var(--white);
+}
+
 nav ul li a:after {
     content: '';
     position: absolute;

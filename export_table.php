@@ -1,6 +1,20 @@
 <?php
 require_once 'includes/config.php';
 
+// Initialize session
+session_start();
+
+// Check if user is logged in
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to login page
+    header("Location: login.php");
+    exit;
+}
+
+// Get user information
+$isAdmin = isset($_SESSION['is_admin']) ? $_SESSION['is_admin'] : false;
+$username = $_SESSION['user_id'];
+
 // Check if table parameter is provided
 if (!isset($_GET['table']) || empty($_GET['table'])) {
     header('Location: index.php');

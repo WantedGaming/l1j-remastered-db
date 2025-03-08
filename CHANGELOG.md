@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.5.0] - 2025-03-08
+
+### Added
+- Implemented user authentication system with login/logout functionality
+- Created login.php with user authentication form
+- Added session management across all admin pages
+- Created logout.php for secure session termination
+- Added user information display in header with admin badge for admin users
+- Implemented access control to restrict admin pages to authenticated users
+- Added CSS styling for user info and logout button in header
+
+### Changed
+- Updated all admin pages to check for authenticated sessions
+- Modified player.php to include login link instead of direct admin link
+- Enhanced security by redirecting unauthenticated users to login page
+- Updated header navigation to display current user and logout option
+
 ## [0.4.1] - 2025-03-08
 
 ### Changed

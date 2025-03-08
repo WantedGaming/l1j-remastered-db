@@ -1,6 +1,20 @@
 <?php
 require_once 'includes/config.php';
 
+// Initialize session
+session_start();
+
+// Check if user is logged in
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to login page
+    header("Location: login.php");
+    exit;
+}
+
+// Get user information
+$isAdmin = isset($_SESSION['is_admin']) ? $_SESSION['is_admin'] : false;
+$username = $_SESSION['user_id'];
+
 // Check if table parameter is provided
 if (!isset($_GET['table']) || empty($_GET['table'])) {
     header('Location: index.php');
@@ -79,6 +93,10 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete' && !empty($_GET['id']
                     <li><a href="tables.php"><i class="fas fa-table"></i> Tables</a></li>
                     <li><a href="search.php"><i class="fas fa-search"></i> Search</a></li>
                     <li><a href="about.php"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li class="user-info">
+                        <span><i class="fas fa-user"></i> <?php echo htmlspecialchars($username); ?><?php if ($isAdmin): ?> <span class="admin-badge">Admin</span><?php endif; ?></span>
+                        <a href="logout.php" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
                 </ul>
             </nav>
         </div>

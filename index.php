@@ -1,6 +1,20 @@
 <?php
 require_once 'includes/config.php';
 
+// Initialize session
+session_start();
+
+// Check if user is logged in
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to login page
+    header("Location: login.php");
+    exit;
+}
+
+// Get user information
+$isAdmin = isset($_SESSION['is_admin']) ? $_SESSION['is_admin'] : false;
+$username = $_SESSION['user_id'];
+
 // Get all tables in the database
 $tables = getAllTables();
 
@@ -30,6 +44,10 @@ $tableCount = count($tables);
                     <li><a href="search.php"><i class="fas fa-search"></i> Search</a></li>
                     <li><a href="about.php"><i class="fas fa-info-circle"></i> About</a></li>
                     <li><a href="player.php" class="player-view"><i class="fas fa-users"></i> Player View</a></li>
+                    <li class="user-info">
+                        <span><i class="fas fa-user"></i> <?php echo htmlspecialchars($username); ?><?php if ($isAdmin): ?> <span class="admin-badge">Admin</span><?php endif; ?></span>
+                        <a href="logout.php" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
                 </ul>
             </nav>
         </div>

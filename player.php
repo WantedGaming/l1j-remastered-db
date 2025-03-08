@@ -34,7 +34,7 @@ $tableCount = count($tables);
                     <li><a href="#">Quests</a></li>
                     <li><a href="#">Maps</a></li>
                     <li><a href="#">Tools</a></li>
-                    <li><a href="index.php" class="admin-link">Admin</a></li>
+                    <li><a href="login.php" class="admin-link">Login</a></li>
                 </ul>
             </nav>
         </div>
