@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.3.0] - 2025-03-08
+
+### Added
+- Completely redesigned the index page with a modern, gaming-focused interface
+- Added hero section with clear call-to-action buttons
+- Implemented database statistics cards with icons and animations
+- Added real-time table filtering and sorting functionality
+- Enhanced card design with subtle animations and improved visual hierarchy
+- Added footer links section with GitHub repository link
+- Implemented subtle background patterns and gradients for improved aesthetics
+
+### Changed
+- Updated CSS with modern design elements including gradients, animations, and improved spacing
+- Enhanced button styles with hover effects and animations
+- Improved card design with better shadows, borders, and hover effects
+- Modernized the header and navigation with improved visual feedback
+- Updated footer with a more professional and modern look
+- Improved overall typography and spacing for better readability
+- Enhanced color scheme implementation with additional accent colors
+
+### Features
+- Interactive table filtering by name
+- Table sorting by name or row count
+- Animated UI elements for better user engagement
+- Improved visual hierarchy and information organization
+- Enhanced mobile responsiveness
+- Better visual feedback for interactive elements
+
 ## [0.2.0] - 2025-03-08
 
 ### Added
