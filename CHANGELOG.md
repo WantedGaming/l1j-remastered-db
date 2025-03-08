@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.1] - 2025-03-08
+
+### Changed
+- Reverted table cards to their previous style, removing red accents
+- Changed card gradient overlay to a subtle white gradient
+- Updated card header border to use a light border instead of red
+- Modified card title indicator dot to use gray instead of red
+- Changed card hover border color to a subtle white instead of red
+
 ## [0.3.0] - 2025-03-08
 
 ### Added
