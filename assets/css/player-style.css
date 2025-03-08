@@ -348,6 +348,11 @@ main {
     margin-top: var(--spacing-lg);
 }
 
+/* Make sure all view-more and view-all links are white */
+.view-more a, .view-all a {
+    color: var(--white);
+}
+
 /* Featured Items and NPCs */
 .featured-list {
     display: flex;
