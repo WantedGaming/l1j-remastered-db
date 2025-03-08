@@ -32,7 +32,7 @@ $tableCount = count($tables);
                     <li><a href="#">Items</a></li>
                     <li><a href="#">NPCs</a></li>
                     <li><a href="#">Quests</a></li>
-                    <li><a href="#">Maps</a></li>
+                    <li><a href="maps/index.php">Maps</a></li>
                     <li><a href="#">Tools</a></li>
                     <li><a href="login.php" class="admin-link">Login</a></li>
                 </ul>
@@ -49,6 +49,7 @@ $tableCount = count($tables);
                 <div class="hero-buttons">
                     <a href="#" class="btn btn-primary">Browse Items</a>
                     <a href="#" class="btn btn-secondary">Browse NPCs</a>
+                    <a href="maps/index.php" class="btn btn-secondary">Browse Maps</a>
                     <a href="#" class="btn btn-secondary">Browse Data</a>
                 </div>
             </div>

@@ -1,0 +1,6 @@
+This directory contains map images.
+
+Image files should be named according to the image_path field in the mapids table.
+For example: talking_island.jpg, elven_forest.jpg, etc.
+
+Images should ideally be 800x600 pixels or larger with a 4:3 aspect ratio.

@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.6.0] - 2025-03-08
+
+### Added
+- Added maps functionality with list and detail views
+- Created mapids.sql with sample map data for the game
+- Implemented maps/index.php with grid layout and filtering options
+- Created maps/view.php for detailed map information display
+- Added maps directory structure for better organization
+- Integrated maps navigation in both admin and player views
+
+### Changed
+- Updated navigation menus to include maps section
+- Enhanced player view with direct access to maps browsing
+- Improved overall site organization with dedicated maps section
+- Added map-specific styling for both list and detail views
+
 ## [0.5.0] - 2025-03-08
 
 ### Added

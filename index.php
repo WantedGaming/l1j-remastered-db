@@ -41,6 +41,7 @@ $tableCount = count($tables);
                 <ul>
                     <li><a href="index.php" class="active"><i class="fas fa-home"></i> Admin Home</a></li>
                     <li><a href="tables.php"><i class="fas fa-table"></i> Tables</a></li>
+                    <li><a href="maps/index.php"><i class="fas fa-map"></i> Maps</a></li>
                     <li><a href="search.php"><i class="fas fa-search"></i> Search</a></li>
                     <li><a href="about.php"><i class="fas fa-info-circle"></i> About</a></li>
                     <li><a href="player.php" class="player-view"><i class="fas fa-users"></i> Player View</a></li>
