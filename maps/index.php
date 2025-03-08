@@ -66,93 +66,73 @@ foreach ($maps as &$map) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
-        .map-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .map-card {
-            background: rgba(30, 30, 30, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .map-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-        
-        .map-image {
-            height: 150px;
-            background-color: #333;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        
-        .map-image-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            font-size: 48px;
-            color: rgba(255, 255, 255, 0.2);
-        }
-        
-        .map-type {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-        
-        .map-content {
-            padding: 15px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .map-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: white;
-        }
-        
-        .map-region {
-            font-size: 14px;
-            color: #aaa;
-            margin-bottom: 10px;
-        }
-        
-        .map-details {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: auto;
-        }
-        
-        .map-detail {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            color: #ddd;
-        }
+    .map-list {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .map-list-item {
+        display: flex;
+        align-items: center;
+        background: rgba(30, 30, 30, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        margin-bottom: 15px;
+        padding: 15px;
+        transition: all 0.3s ease;
+    }
+    
+    .map-list-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .map-list-image {
+        width: 80px;
+        height: 80px;
+        background-color: #333;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+    
+    .map-list-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .map-list-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    
+    .map-list-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 5px;
+    }
+    
+    .map-list-detail {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px;
+        color: #ddd;
+    }
+    
+    .map-list-actions {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
         
         .map-filters {
             background: rgba(30, 30, 30, 0.7);
@@ -288,41 +268,46 @@ foreach ($maps as &$map) {
             </div>
         </div>
         
-        <div class="map-grid">
+        <div class="map-list">
             <?php foreach ($maps as $map): ?>
-            <div class="map-card" 
-                 data-name="<?php echo htmlspecialchars(strtolower($map['name'])); ?>"
-                 data-region="<?php echo htmlspecialchars($map['region']); ?>"
-                 data-type="<?php echo htmlspecialchars($map['type']); ?>"
-                 data-min-level="<?php echo (int)$map['min_level']; ?>"
-                 data-max-level="<?php echo (int)$map['max_level']; ?>">
-                <a href="view.php?id=<?php echo $map['mapid']; ?>">
-                    <div class="map-image">
-                        <iframe src="../<?php echo $map['image_path']; ?>" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
-                        <div class="map-type"><?php echo htmlspecialchars($map['type']); ?></div>
+            <a href="view.php?id=<?php echo $map['mapid']; ?>" class="map-list-item"
+               data-name="<?php echo htmlspecialchars(strtolower($map['name'])); ?>"
+               data-region="<?php echo htmlspecialchars($map['region']); ?>"
+               data-type="<?php echo htmlspecialchars($map['type']); ?>"
+               data-min-level="<?php echo (int)$map['min_level']; ?>"
+               data-max-level="<?php echo (int)$map['max_level']; ?>">
+                <div class="map-list-image">
+                    <iframe src="../<?php echo $map['image_path']; ?>" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+                </div>
+                <div class="map-list-content">
+                    <div class="map-list-title">
+                        <?php echo htmlspecialchars($map['name']); ?>
+                        <?php if ($map['is_safe_zone']): ?>
+                        <span class="badge badge-safe">Safe</span>
+                        <?php endif; ?>
+                        <?php if ($map['is_pvp']): ?>
+                        <span class="badge badge-pvp">PvP</span>
+                        <?php endif; ?>
+                        <?php if ($map['is_instance']): ?>
+                        <span class="badge badge-instance">Instance</span>
+                        <?php endif; ?>
                     </div>
-                    <div class="map-content">
-                        <div class="map-title">
-                            <?php echo htmlspecialchars($map['name']); ?>
-                            <?php if ($map['is_safe_zone']): ?>
-                            <span class="badge badge-safe">Safe</span>
-                            <?php endif; ?>
-                            <?php if ($map['is_pvp']): ?>
-                            <span class="badge badge-pvp">PvP</span>
-                            <?php endif; ?>
-                            <?php if ($map['is_instance']): ?>
-                            <span class="badge badge-instance">Instance</span>
-                            <?php endif; ?>
+                    <div class="map-list-info">
+                        <div class="map-list-detail">
+                            <i class="fas fa-globe"></i> <?php echo htmlspecialchars($map['region']); ?>
                         </div>
-                        <div class="map-region"><?php echo htmlspecialchars($map['region']); ?></div>
-                        <div class="map-details">
-                            <div class="map-detail">
-                                <i class="fas fa-layer-group"></i> Level <?php echo $map['min_level']; ?>-<?php echo $map['max_level']; ?>
-                            </div>
+                        <div class="map-list-detail">
+                            <i class="fas fa-tag"></i> <?php echo htmlspecialchars($map['type']); ?>
+                        </div>
+                        <div class="map-list-detail">
+                            <i class="fas fa-layer-group"></i> Level <?php echo $map['min_level']; ?>-<?php echo $map['max_level']; ?>
                         </div>
                     </div>
-                </a>
-            </div>
+                </div>
+                <div class="map-list-actions">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
             <?php endforeach; ?>
         </div>
         
@@ -339,7 +324,7 @@ foreach ($maps as &$map) {
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const mapCards = document.querySelectorAll('.map-card');
+            const mapItems = document.querySelectorAll('.map-list-item');
             const searchInput = document.getElementById('search');
             const regionSelect = document.getElementById('region');
             const typeSelect = document.getElementById('type');
@@ -362,22 +347,22 @@ foreach ($maps as &$map) {
                     maxLevel = parseInt(levelRange[1]);
                 }
                 
-                mapCards.forEach(card => {
-                    const name = card.dataset.name;
-                    const region = card.dataset.region;
-                    const type = card.dataset.type;
-                    const cardMinLevel = parseInt(card.dataset.minLevel);
-                    const cardMaxLevel = parseInt(card.dataset.maxLevel);
+                mapItems.forEach(item => {
+                    const name = item.dataset.name;
+                    const region = item.dataset.region;
+                    const type = item.dataset.type;
+                    const itemMinLevel = parseInt(item.dataset.minLevel);
+                    const itemMaxLevel = parseInt(item.dataset.maxLevel);
                     
                     const nameMatch = name.includes(searchTerm);
                     const regionMatch = !regionFilter || region === regionFilter;
                     const typeMatch = !typeFilter || type === typeFilter;
-                    const levelMatch = (cardMinLevel <= maxLevel && cardMaxLevel >= minLevel);
+                    const levelMatch = (itemMinLevel <= maxLevel && itemMaxLevel >= minLevel);
                     
                     if (nameMatch && regionMatch && typeMatch && levelMatch) {
-                        card.style.display = '';
+                        item.style.display = '';
                     } else {
-                        card.style.display = 'none';
+                        item.style.display = 'none';
                     }
                 });
             }
@@ -390,8 +375,8 @@ foreach ($maps as &$map) {
                 typeSelect.value = '';
                 levelSelect.value = '';
                 
-                mapCards.forEach(card => {
-                    card.style.display = '';
+                mapItems.forEach(item => {
+                    item.style.display = '';
                 });
             });
             
@@ -399,13 +384,13 @@ foreach ($maps as &$map) {
             searchInput.addEventListener('input', function() {
                 const searchTerm = this.value.toLowerCase();
                 
-                mapCards.forEach(card => {
-                    const name = card.dataset.name;
+                mapItems.forEach(item => {
+                    const name = item.dataset.name;
                     
                     if (name.includes(searchTerm)) {
-                        card.style.display = '';
+                        item.style.display = '';
                     } else {
-                        card.style.display = 'none';
+                        item.style.display = 'none';
                     }
                 });
             });
