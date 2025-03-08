@@ -26,6 +26,17 @@
     box-sizing: border-box;
 }
 
+/* Global link styling */
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all var(--transition-speed);
+}
+
+a:hover {
+    color: var(--red-1);
+}
+
 body {
     font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
     background-color: var(--black-1);

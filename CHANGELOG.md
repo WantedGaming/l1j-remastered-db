@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.6.2] - 2025-03-08
+
+### Changed
+- Updated all links across the site to be white by default and turn red when hovered
+- Added global link styling rules to both style.css and player-style.css for consistent appearance
+
+## [0.6.1] - 2025-03-08
+
+### Changed
+- Changed breadcrumbs on map pages from purple/blue to white with red color on hover
+- Converted map index page from card view to list view for better readability and information display
+- Added specific breadcrumb styling in the main CSS file
+
 ## [0.6.0] - 2025-03-08
 
 ### Added
