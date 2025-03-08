@@ -5,6 +5,7 @@
 ### Changed
 - Fixed link colors in player view to maintain consistent white color scheme
 - Ensured "View More Statistics", "View All Items", and "View All NPCs" links are white instead of purple
+- Added hover effect to links that changes color to red when hovered, consistent with the site's color scheme
 
 ## [0.4.0] - 2025-03-08
 

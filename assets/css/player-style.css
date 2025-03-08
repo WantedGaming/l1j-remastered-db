@@ -351,6 +351,12 @@ main {
 /* Make sure all view-more and view-all links are white */
 .view-more a, .view-all a {
     color: var(--white);
+    transition: all var(--transition-speed);
+}
+
+/* Add hover effect using the primary color (red) */
+.view-more a:hover, .view-all a:hover {
+    color: var(--primary-color);
 }
 
 /* Featured Items and NPCs */
