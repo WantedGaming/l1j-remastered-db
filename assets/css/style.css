@@ -121,6 +121,16 @@ nav ul li a.active {
     transform: translateY(-2px);
 }
 
+nav ul li a.player-view {
+    background-color: rgba(52, 152, 219, 0.2);
+    color: #3498db;
+}
+
+nav ul li a.player-view:hover {
+    background-color: rgba(52, 152, 219, 0.4);
+    color: var(--white);
+}
+
 nav ul li a:after {
     content: '';
     position: absolute;

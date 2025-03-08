@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.4.0] - 2025-03-08
+
+### Added
+- Created separate views for admin and players/guests
+- Implemented a new player-focused interface based on the sample site design
+- Added dedicated player.php page with gaming-focused layout
+- Created new player-style.css with green/blue color scheme
+- Added boss timers section for player view
+- Added database statistics display with visual counters
+- Added featured items and NPCs sections
+- Added quick tools section for player utilities
+- Implemented navigation between admin and player views
+
+### Changed
+- Updated index.php to serve as the admin interface
+- Added visual indicator for switching between views
+- Enhanced navigation with clear view separation
+- Improved overall user experience with role-specific interfaces
+
 ## [0.3.1] - 2025-03-08
 
 ### Changed

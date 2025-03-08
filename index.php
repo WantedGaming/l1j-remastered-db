@@ -13,7 +13,7 @@ $tableCount = count($tables);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L1J Remastered Database</title>
+    <title>L1J Remastered Database - Admin</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -22,13 +22,14 @@ $tableCount = count($tables);
 <body>
     <header>
         <div class="container header-content">
-            <a href="index.php" class="logo">L1J Remastered DB</a>
+            <a href="index.php" class="logo">L1J Remastered DB - Admin</a>
             <nav>
                 <ul>
-                    <li><a href="index.php" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.php" class="active"><i class="fas fa-home"></i> Admin Home</a></li>
                     <li><a href="tables.php"><i class="fas fa-table"></i> Tables</a></li>
                     <li><a href="search.php"><i class="fas fa-search"></i> Search</a></li>
                     <li><a href="about.php"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="player.php" class="player-view"><i class="fas fa-users"></i> Player View</a></li>
                 </ul>
             </nav>
         </div>
